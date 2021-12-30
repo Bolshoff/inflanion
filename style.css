@@ -1,0 +1,90 @@
+
+/*Обнуление*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 10px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+.header{
+    margin:0 25% 0 25%;
+    width:50%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+.basket-header{
+    cursor: pointer;
+    margin-left: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.basket-item{
+    cursor: pointer;
+    margin: 1.5rem;
+    font-size: 1.4rem;
+}
+.chart-container{
+    margin-left: 20rem;
+    text-align: center;
+    display: none;
+}
+.chart-container.active{
+    display: block;
+}
+.chart-container-overall{
+    margin-left: 20rem;
+    text-align: center;
+    display: none;
+}
+.chart-container-overall.active{
+
+    display:block;
+}
+
+.flex-wrapper{
+    display: flex;
+    margin-top: 5rem;
+}
+h2{
+    font-size: 1.6rem;
+}
+.bread{
+    display: none;
+}

@@ -1,0 +1,92 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Inflation</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>INFLATION</h1>
+        <h2>consumer basket</h2>
+    </div>
+
+    <div class="flex-wrapper">
+     <div class="basket">
+        <h2 class = "basket-header"   >Список продуктов потребтельской корзины</h2>
+        <ul class="basket-list hidden">
+            <li class="basket-item">Хлебобулочные, макаронные изделия и крупы</li>
+            <li class="basket-item">Картофель</li>
+            <li class="basket-item">Овощи</li>
+            <li class="basket-item">Фрукты</li>
+            <li class="basket-item">Сахар и кондитерские изд-ия</li>
+            <li class="basket-item">Мясо</li>
+            <li class="basket-item">Рыба</li>
+            <li class="basket-item">Молочные продукты</li>
+            <li class="basket-item">Яйца</li>
+            <li class="basket-item">Масла и жиры</li>
+            <li class="basket-item">Чай и специи</li>
+        </ul>
+    </div>
+
+    <div class="chart-container-overall active"   style="position: relative; width:70rem; height:70rem" >
+        <h2>Общая инфляци по потребительской корзине </h2>
+        <canvas id="overallChart" ></canvas>
+    </div>
+    <div class="chart-container bread"   style="position: relative; width:70rem; height:70rem" >
+            <h2>Хлебобулочные, макаронные изделия и крупы </h2>
+            <canvas id="bread" ></canvas>
+    </div>
+        <div class="chart-container potato"   style="position: relative; width:70rem; height:70rem" >
+            <h2>Картофель</h2>
+            <canvas id="potato" ></canvas>
+        </div>
+        <div class="chart-container vegetables"   style="position: relative; width:70rem; height:70rem" >
+            <h2>Овощи</h2>
+            <canvas id="vegetables" ></canvas>
+        </div>
+        <div class="chart-container fruits"   style="position: relative; width:70rem; height:70rem" >
+            <h2>Фрукты</h2>
+            <canvas id="fruits" ></canvas>
+        </div>
+        <div class="chart-container sugar"   style="position: relative; width:70rem; height:70rem" >
+            <h2>Сахар и кондитерские изд-ия</h2>
+            <canvas id="sugar" ></canvas>
+        </div>
+        <div class="chart-container meat"   style="position: relative; width:70rem; height:70rem" >
+            <h2>Мясо</h2>
+            <canvas id="meat" ></canvas>
+        </div>
+        <div class="chart-container fish"   style="position: relative; width:70rem; height:70rem" >
+            <h2>Рыба</h2>
+            <canvas id="fish" ></canvas>
+        </div>
+        <div class="chart-container milk"   style="position: relative; width:70rem; height:70rem" >
+            <h2>Молочные продукты</h2>
+            <canvas id="milk" ></canvas>
+        </div>
+        <div class="chart-container eggs"   style="position: relative; width:70rem; height:70rem" >
+            <h2>Яйца</h2>
+            <canvas id="eggs" ></canvas>
+        </div>
+        <div class="chart-container oil"   style="position: relative; width:70rem; height:70rem" >
+            <h2>Масла и жиры</h2>
+            <canvas id="oil" ></canvas>
+        </div>
+        <div class="chart-container tea"   style="position: relative; width:70rem; height:70rem" >
+            <h2>Чай и специи</h2>
+            <canvas id="tea" ></canvas>
+        </div>
+    </div>
+
+<script src="node_modules/chart.js/dist/chart.js"></script>
+<script src = "index.js"></script>
+</body>
+</html>
