@@ -11,13 +11,13 @@ const milk = document.getElementById('milk');
 const eggs = document.getElementById('eggs');
 const oil = document.getElementById('oil');
 const tea = document.getElementById('tea');
-const overallChart = new Chart(overall, {
+const chartOptions = function (dataArr) {return {
     type: 'line', //bar
     data: {
         labels: [2016, 2017, 2018, 2019, 2020, 2021],
         datasets: [{
             label: 'Уровень инфляции, %',
-            data: [12, 25, 3, 5, 2, 3],
+            data: dataArr,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -44,394 +44,39 @@ const overallChart = new Chart(overall, {
             }
         }
     }
-});
-const breadChart = new Chart(bread, {
-    type: 'line', //bar
-    data: {
-        labels: [2016, 2017, 2018, 2019, 2020, 2021],
-        datasets: [{
-            label: 'Уровень инфляции, %',
-            data: [15, 20, 10, 7, 13, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-const potatoChart = new Chart(potato, {
-    type: 'line', //bar
-    data: {
-        labels: [2016, 2017, 2018, 2019, 2020, 2021],
-        datasets: [{
-            label: 'Уровень инфляции, %',
-            data: [15, 20, 10, 7, 13, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-const vegetablesChart = new Chart(vegetables, {
-    type: 'line', //bar
-    data: {
-        labels: [2016, 2017, 2018, 2019, 2020, 2021],
-        datasets: [{
-            label: 'Уровень инфляции, %',
-            data: [15, 20, 10, 7, 13, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-const fruitsChart = new Chart(fruits, {
-    type: 'line', //bar
-    data: {
-        labels: [2016, 2017, 2018, 2019, 2020, 2021],
-        datasets: [{
-            label: 'Уровень инфляции, %',
-            data: [15, 20, 10, 7, 13, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-const sugarChart = new Chart(sugar, {
-    type: 'line', //bar
-    data: {
-        labels: [2016, 2017, 2018, 2019, 2020, 2021],
-        datasets: [{
-            label: 'Уровень инфляции, %',
-            data: [15, 20, 10, 7, 13, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-const meatChart = new Chart(meat, {
-    type: 'line', //bar
-    data: {
-        labels: [2016, 2017, 2018, 2019, 2020, 2021],
-        datasets: [{
-            label: 'Уровень инфляции, %',
-            data: [15, 20, 10, 7, 13, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-const fishChart = new Chart(fish, {
-    type: 'line', //bar
-    data: {
-        labels: [2016, 2017, 2018, 2019, 2020, 2021],
-        datasets: [{
-            label: 'Уровень инфляции, %',
-            data: [15, 20, 10, 7, 13, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-const milkChart = new Chart(milk, {
-    type: 'line', //bar
-    data: {
-        labels: [2016, 2017, 2018, 2019, 2020, 2021],
-        datasets: [{
-            label: 'Уровень инфляции, %',
-            data: [15, 20, 10, 7, 13, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-const eggsChart = new Chart(eggs, {
-    type: 'line', //bar
-    data: {
-        labels: [2016, 2017, 2018, 2019, 2020, 2021],
-        datasets: [{
-            label: 'Уровень инфляции, %',
-            data: [15, 20, 10, 7, 13, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-const oilChart = new Chart(oil, {
-    type: 'line', //bar
-    data: {
-        labels: [2016, 2017, 2018, 2019, 2020, 2021],
-        datasets: [{
-            label: 'Уровень инфляции, %',
-            data: [15, 20, 10, 7, 13, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-const teaChart = new Chart(tea, {
-    type: 'line', //bar
-    data: {
-        labels: [2016, 2017, 2018, 2019, 2020, 2021],
-        datasets: [{
-            label: 'Уровень инфляции, %',
-            data: [15, 20, 10, 7, 13, 9],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+} }
 
-//basket-list
-const basketHeader = document.querySelector('.basket-header')
-const basketList = document.querySelector('.basket-list')
+const overallData = [20, 30, 10, 27, 17, 19];
+const overallChart = new Chart(overall, chartOptions(overallData) ); //общий график
 
-basketHeader.addEventListener('click', ()=>{
-    basketList.classList.toggle('hidden')
-})
+const breadData = [30, 40, 10, 7, 13, 9];
+const potatoData = [29, 32, 15, 17, 22, 5];
+const vegetablesData =[23,6,87,98,45,23];
+const fruitsData = [25, 33, 15, 27, 22, 18];
+const sugarData = [28, 33, 19, 27, 12, 18];
+const meatData = [23, 35, 15, 22, 22, 14];
+const fishData = [16,14, 12, 10, 22, 18];
+const milkData =[6, 22, 15, 11, 9, 18] ;
+const eggsData =[3, 33, 8, 27, 1, 18] ;
+const oildData =[20, 15, 13, 4, 7, 9] ;
+const teaData = [5, 4, 3, 2, 3, 4];
+
+
+const breadChart = new Chart(bread, chartOptions(breadData));
+const potatoChart = new Chart(potato, chartOptions(potatoData));
+const vegetablesChart = new Chart(vegetables,chartOptions(vegetablesData));
+const fruitsChart = new Chart(fruits, chartOptions(fruitsData));
+const sugarChart = new Chart(sugar, chartOptions(sugarData));
+const meatChart = new Chart(meat, chartOptions(meatData));
+const fishChart = new Chart(fish, chartOptions(fishData));
+const milkChart = new Chart(milk, chartOptions(milkData));
+const eggsChart = new Chart(eggs, chartOptions(eggsData));
+const oilChart = new Chart(oil, chartOptions(oildData));
+const teaChart = new Chart(tea, chartOptions(teaData));
+
+
 
 //---------------- Chart toggle---------------------//
-
-const listItem = document.querySelectorAll('.basket-item')
-const chartContainer = document.querySelectorAll('.chart-container')
 
 $(document).ready(function(){
         $(".basket-item").click(function(){
@@ -441,3 +86,9 @@ $(document).ready(function(){
     }
 
 );
+
+function overallChartToggle(){
+    $(".chart-container").removeClass("active")
+    $(".chart-container-overall").addClass("active");
+}
+$(".overall , .inflation-header").click(overallChartToggle);

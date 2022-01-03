@@ -14,80 +14,92 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="header">
-        <h1>INFLATION</h1>
-        <h2>consumer basket</h2>
-    </div>
 
-    <div class="flex-wrapper">
-     <div class="basket">
-        <h2 class = "basket-header"   >Список продуктов потребтельской корзины</h2>
-        <ul class="basket-list hidden">
-            <li class="basket-item">Хлебобулочные, макаронные изделия и крупы</li>
-            <li class="basket-item">Картофель</li>
-            <li class="basket-item">Овощи</li>
-            <li class="basket-item">Фрукты</li>
-            <li class="basket-item">Сахар и кондитерские изд-ия</li>
-            <li class="basket-item">Мясо</li>
-            <li class="basket-item">Рыба</li>
-            <li class="basket-item">Молочные продукты</li>
-            <li class="basket-item">Яйца</li>
-            <li class="basket-item">Масла и жиры</li>
-            <li class="basket-item">Чай и специи</li>
-        </ul>
-    </div>
 
-    <div class="chart-container-overall active"   style="position: relative; width:70rem; height:70rem" >
-        <h2>Общая инфляци по потребительской корзине </h2>
-        <canvas id="overallChart" ></canvas>
-    </div>
-    <div class="chart-container bread"   style="position: relative; width:70rem; height:70rem" >
-            <h2>Хлебобулочные, макаронные изделия и крупы </h2>
-            <canvas id="bread" ></canvas>
-    </div>
-        <div class="chart-container potato"   style="position: relative; width:70rem; height:70rem" >
-            <h2>Картофель</h2>
-            <canvas id="potato" ></canvas>
+<div class="flex-wrapper">
+    <div class="basket-wrapper">
+        <div class="basket">
+            <h2 class="basket-header">Список продуктов потребтельской корзины</h2>
+            <ul class="basket-list">
+                <li class="basket-item">Хлебобулочные, макаронные изделия <br> и крупы</li>
+                <li class="basket-item">Картофель</li>
+                <li class="basket-item">Овощи</li>
+                <li class="basket-item">Фрукты</li>
+                <li class="basket-item">Сахар и кондитерские изделия</li>
+                <li class="basket-item">Мясо</li>
+                <li class="basket-item">Рыба</li>
+                <li class="basket-item">Молочные продукты</li>
+                <li class="basket-item">Яйца</li>
+                <li class="basket-item">Масла и жиры</li>
+                <li class="basket-item">Чай и специи</li>
+            </ul>
+            <p class="overall">Общая инфляция по потребительской корзине</p>
         </div>
-        <div class="chart-container vegetables"   style="position: relative; width:70rem; height:70rem" >
-            <h2>Овощи</h2>
-            <canvas id="vegetables" ></canvas>
-        </div>
-        <div class="chart-container fruits"   style="position: relative; width:70rem; height:70rem" >
-            <h2>Фрукты</h2>
-            <canvas id="fruits" ></canvas>
-        </div>
-        <div class="chart-container sugar"   style="position: relative; width:70rem; height:70rem" >
-            <h2>Сахар и кондитерские изд-ия</h2>
-            <canvas id="sugar" ></canvas>
-        </div>
-        <div class="chart-container meat"   style="position: relative; width:70rem; height:70rem" >
-            <h2>Мясо</h2>
-            <canvas id="meat" ></canvas>
-        </div>
-        <div class="chart-container fish"   style="position: relative; width:70rem; height:70rem" >
-            <h2>Рыба</h2>
-            <canvas id="fish" ></canvas>
-        </div>
-        <div class="chart-container milk"   style="position: relative; width:70rem; height:70rem" >
-            <h2>Молочные продукты</h2>
-            <canvas id="milk" ></canvas>
-        </div>
-        <div class="chart-container eggs"   style="position: relative; width:70rem; height:70rem" >
-            <h2>Яйца</h2>
-            <canvas id="eggs" ></canvas>
-        </div>
-        <div class="chart-container oil"   style="position: relative; width:70rem; height:70rem" >
-            <h2>Масла и жиры</h2>
-            <canvas id="oil" ></canvas>
-        </div>
-        <div class="chart-container tea"   style="position: relative; width:70rem; height:70rem" >
-            <h2>Чай и специи</h2>
-            <canvas id="tea" ></canvas>
-        </div>
-    </div>
 
-<!--<script src="node_modules/chart.js/dist/chart.js"></script> -->
-<script src = "index.js"></script>
+    </div>
+    <div class="chart-container-wrapper">
+        <div class="header-background">
+            <div class="header ">
+                <h1 class="inflation-header">INFLATION <br>consumer basket</h1>
+            </div>
+        </div>
+        <div class="chart-container-body">
+            <div class="chart-container-overall active" style="position: relative; width:70rem; height:60rem">
+                <h2>Общая инфляци по потребительской корзине </h2>
+                <canvas id="overallChart"></canvas>
+            </div>
+            <div class="chart-container bread" style="position: relative; width:70rem; height:60rem">
+                <h2>Хлебобулочные, макаронные изделия и крупы </h2>
+                <canvas id="bread"></canvas>
+            </div>
+            <div class="chart-container potato" style="position: relative; width:70rem; height:60rem">
+                <h2>Картофель</h2>
+                <canvas id="potato"></canvas>
+            </div>
+            <div class="chart-container vegetables" style="position: relative; width:70rem; height:60rem">
+                <h2>Овощи</h2>
+                <canvas id="vegetables"></canvas>
+            </div>
+            <div class="chart-container fruits" style="position: relative; width:70rem; height:60rem">
+                <h2>Фрукты</h2>
+                <canvas id="fruits"></canvas>
+            </div>
+            <div class="chart-container sugar" style="position: relative; width:70rem; height:60rem">
+                <h2>Сахар и кондитерские изделия</h2>
+                <canvas id="sugar"></canvas>
+            </div>
+            <div class="chart-container meat" style="position: relative; width:70rem; height:60rem">
+                <h2>Мясо</h2>
+                <canvas id="meat"></canvas>
+            </div>
+            <div class="chart-container fish" style="position: relative; width:70rem; height:60rem">
+                <h2>Рыба</h2>
+                <canvas id="fish"></canvas>
+            </div>
+            <div class="chart-container milk" style="position: relative; width:70rem; height:60rem">
+                <h2>Молочные продукты</h2>
+                <canvas id="milk"></canvas>
+            </div>
+            <div class="chart-container eggs" style="position: relative; width:70rem; height:60rem">
+                <h2>Яйца</h2>
+                <canvas id="eggs"></canvas>
+            </div>
+            <div class="chart-container oil" style="position: relative; width:70rem; height:60rem">
+                <h2>Масла и жиры</h2>
+                <canvas id="oil"></canvas>
+            </div>
+            <div class="chart-container tea" style="position: relative; width:70rem; height:60rem">
+                <h2>Чай и специи</h2>
+                <canvas id="tea"></canvas>
+            </div>
+        </div>
+        <div class="chart-container-footer">
+            <a href='https://ru.freepik.com/psd/food'>Food PSD создан(а) freepik - ru.freepik.com</a>
+        </div>
+
+    </div>
+</div>
+
+<script src="index.js"></script>
 </body>
 </html>

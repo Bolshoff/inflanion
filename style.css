@@ -37,54 +37,125 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
+.flex-wrapper{
+    display: flex;
+    background: url("img/original.jpg")  no-repeat;
+    background-size: cover;
+    max-width: 1920px;
 
+}
+
+.header-background {
+    /*position: relative;*/
+    /*top: 0;*/
+    width: 100%;
+    height: 10rem;
+}
 .header{
-    margin:0 25% 0 25%;
-    width:50%;
+color: #fdfff8;
+    width: 100%;
+    height: 10rem;
     text-align: center;
+    line-height: 3rem;
     font-size: 3rem;
     font-weight: bold;
+
+    background: rgba(61, 60, 60, 0.4);
+    backdrop-filter: blur(10px);
+
 }
 .hidden{
     visibility: hidden;
     opacity: 0;
 }
+.basket{
+    margin: 2rem;
+}
+
+.basket-wrapper{
+    background-color: #232323;
+    width: 40%;
+}
+
 .basket-header{
-    cursor: pointer;
     margin-left: 1.5rem;
     font-size: 1.6rem;
     font-weight: bold;
 }
-.basket-item{
+.basket-item, .overall {
     cursor: pointer;
+    height: 4.5rem;
     margin: 1.5rem;
-    font-size: 1.4rem;
+    text-align: center;
+    Text: appetizer ;
+    font-family: Syncopate;
+    font-size: 18.3px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #fdfff8;
 }
-.chart-container{
-    margin-left: 20rem;
+.basket-item:hover, .overall:hover {
+    cursor: pointer;
+    height: 5.5rem;
+    margin: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 3rem;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.chart-container, .chart-container-overall{
+    margin: 10rem;
     text-align: center;
     display: none;
+    color: #fdfff8;
 }
 .chart-container.active{
     display: block;
 }
-.chart-container-overall{
-    margin-left: 20rem;
-    text-align: center;
-    display: none;
-}
+
 .chart-container-overall.active{
 
     display:block;
 }
-
-.flex-wrapper{
+.chart-container-wrapper{
+    min-height: 100%;
     display: flex;
-    margin-top: 5rem;
+    flex-direction: column;
+    /*position: relative;*/
+    width: 100%;
 }
+.chart-container-body{
+
+    background: rgba(24, 24, 24, 0.7);
+    backdrop-filter: blur(10px);
+    /*position: absolute;*/
+    height: 80%;
+    flex: 1 1 auto;
+    width: 100%;
+}
+.chart-container-footer{
+    background: rgba(61, 60, 60, 0.4);
+    backdrop-filter: blur(10px);
+    height: 10rem;
+    text-align: center;
+
+}
+
+
 h2{
     font-size: 1.6rem;
 }
-.bread{
-    display: none;
+/*.bread{*/
+/*    display: none;*/
+/*}*/
+.inflation-header{
+    cursor: pointer;
+    padding-top: 2rem;
+
+
+}
+.overall{
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin-left: 1.5rem;
 }
