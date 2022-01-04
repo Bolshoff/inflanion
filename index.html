@@ -12,6 +12,9 @@
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
             crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat+Alternates&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -19,9 +22,9 @@
 <div class="flex-wrapper">
     <div class="basket-wrapper">
         <div class="basket">
-            <h2 class="basket-header">Список продуктов потребтельской корзины</h2>
+<!--            <h2 class="basket-header">Список продуктов потребтельской корзины</h2>-->
             <ul class="basket-list">
-                <li class="basket-item">Хлебобулочные, макаронные изделия <br> и крупы</li>
+                <li class="basket-item">Хлебобулочные, макаронные изделия  и крупы</li>
                 <li class="basket-item">Картофель</li>
                 <li class="basket-item">Овощи</li>
                 <li class="basket-item">Фрукты</li>
@@ -40,12 +43,13 @@
     <div class="chart-container-wrapper">
         <div class="header-background">
             <div class="header ">
-                <h1 class="inflation-header">INFLATION <br>consumer basket</h1>
+                <span><img class="header-image" src="img/basket_14.svg" alt="food-basket"></span>
+                <h1 class="inflation-header">Инфляция <br>потребительской корзины</h1>
             </div>
         </div>
         <div class="chart-container-body">
             <div class="chart-container-overall active" style="position: relative; width:70rem; height:60rem">
-                <h2>Общая инфляци по потребительской корзине </h2>
+                <h2>Общая инфляция по потребительской корзине </h2>
                 <canvas id="overallChart"></canvas>
             </div>
             <div class="chart-container bread" style="position: relative; width:70rem; height:60rem">
@@ -94,7 +98,7 @@
             </div>
         </div>
         <div class="chart-container-footer">
-            <a href='https://ru.freepik.com/psd/food'>Food PSD создан(а) freepik - ru.freepik.com</a>
+            <a href='https://ru.freepik.com/psd/food'>2021</a>
         </div>
 
     </div>

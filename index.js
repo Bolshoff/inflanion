@@ -11,6 +11,8 @@ const milk = document.getElementById('milk');
 const eggs = document.getElementById('eggs');
 const oil = document.getElementById('oil');
 const tea = document.getElementById('tea');
+Chart.defaults.font.size = 18;
+Chart.defaults.color = '#fff';
 const chartOptions = function (dataArr) {return {
     type: 'line', //bar
     data: {
@@ -34,15 +36,28 @@ const chartOptions = function (dataArr) {return {
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 1,
+
         }]
     },
     options: {
         scales: {
             y: {
-                beginAtZero: true
-            }
-        }
+                beginAtZero: true,
+                grid:{
+                    color: 'rgb(255,255,255)'
+                },
+
+
+            },
+            x: {
+                grid:{
+                    color: 'rgb(255,255,255)'
+                }
+            },
+
+        },
+
     }
 } }
 
