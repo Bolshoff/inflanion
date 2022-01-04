@@ -67,7 +67,8 @@ color: #fdfff8;
     opacity: 0;
 }
 .basket{
-    margin: 2rem;
+    /*margin: 2rem;*/
+    margin-top: 5rem;
 }
 
 .basket-wrapper{
