@@ -97,13 +97,16 @@ $(document).ready(function(){
         $(".basket-item").click(function(){
             $(".chart-container").eq($(".basket-item").index(this)).addClass("active").siblings().removeClass("active");
             $(".chart-container-overall").removeClass("active");
+            $(this).addClass("active").siblings().removeClass("active");
         });
     }
 
 );
 
 function overallChartToggle(){
-    $(".chart-container").removeClass("active")
+    $(".chart-container").removeClass("active");
     $(".chart-container-overall").addClass("active");
+    $(".basket-item").removeClass("active");
+
 }
 $(".overall , .inflation-header").click(overallChartToggle);

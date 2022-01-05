@@ -67,7 +67,6 @@ color: #fdfff8;
     opacity: 0;
 }
 .basket{
-    /*margin: 2rem;*/
     margin-top: 5rem;
     width: 35rem;
 
@@ -93,7 +92,7 @@ color: #fdfff8;
     font-weight: 400;
     color: #fdfff8;
 }
-.basket-item:hover, .overall:hover {
+.basket-item:hover, .overall:hover, .basket-item.active {
     cursor: pointer;
     text-align: center;
     color: #ebff99;
